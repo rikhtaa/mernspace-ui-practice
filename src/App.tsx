@@ -1,9 +1,8 @@
-import LoginPage from "./pages/login/login"
 
 function App() {
 
   return (
-    <LoginPage/>
+    <h1>hello</h1>
   )
 }
 
