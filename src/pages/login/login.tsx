@@ -16,7 +16,7 @@ const LoginPage = () => {
    }
    style={{ width: 300}}
    >
-    <Form>
+    <Form initialValues={{remember: true}} >
       <Form.Item
       name="Username"
       rules={[{ required: true, message: 'Please input your Username!'}, {type: 'email', message: "Email is not valid"}]}  
