@@ -3,13 +3,18 @@ import { LockFilled, LockOutlined, UserOutlined } from "@ant-design/icons"
 import { Form } from "antd";
 import { useMutation } from "@tanstack/react-query";
 import { login, type Credentials } from "../../http/api";
-
+import {useAuthStore} from '../../../store'
 
 const loginUser = async (credentials: Credentials)=>{
    const {data} = await login(credentials)
    return data
 }
 const LoginPage = () => {
+  const {setUser} = useAuthStore()
+  const user={
+    email: 'test0@gmail.com'
+  }
+  setUser(user)
   const {mutate, isError, error} = useMutation({
     mutationKey: ['Login'],
     mutationFn: loginUser,
