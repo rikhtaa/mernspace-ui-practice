@@ -1,13 +1,12 @@
 import { Outlet } from "react-router-dom"
 
-function App() {
-
+const NonAuth = () => {
   return (
     <>
-    <h1>hello</h1>
+    <h1>NonAuth</h1>
     <Outlet/>
     </>
   )
 }
 
-export default App
+export default NonAuth
